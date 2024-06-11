@@ -1,89 +1,412 @@
-body {
-    font-family: 'Poppins';
+body{
+    font:'Poppins';
     text-align: center;
-    background-color: #f5f5dc; /* Beige background */
+    background-color: #F9F7F7;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins';
+h1, h2{
+    font: 'Poppins';
     font-weight: 300;
     line-height: 1.5;
-    color: #4a4a4a; /* Darker gray for contrast */
 }
 
-p {
-    color: #4a4a4a; /* Darker gray for contrast */
+h3{
+    font: 'Poppins';
+    font-weight: 300;
+    line-height: 1.5;
 }
 
-.container-fluid {
+p{
+    color: #3F72AF;;
+}
+
+.container-fluid{
     padding: 3% 3%;
 }
+  
 
 /* Sections */
-.white-container {
-    background-color: #fffaf0; /* Floral White */
-    color: #4a4a4a; /* Darker gray for contrast */
+
+.white-container{
+    background-color: #DBE2EF;
+    color: #3F72AF;
     border-radius: 70px;
 }
 
-.colored-container, .projects-container {
-    background-color: #f5f5dc; /* Beige background */
-    color: #4a4a4a; /* Darker gray text */
+.colored-container{
+    background-color: #F9F7F7;
+    color: #3F72AF;
+}
+
+.projects-container{
+    background-color: #F9F7F7;
+    color: #3F72AF;
 }
 
 /* Home Container */
-#title {
-    background-color: #e4d7c5; /* A light beige */
+
+#title .container-fluid{
+    padding:3% 15% 17%;
+}
+
+#title{
+    background-color: #112D4E;
     text-align: left;
 }
 
-.home-header {
+
+.home-header{
     font-size: 7rem;
-    color: #4a4a4a; /* Darker gray for contrast */
+    color: 112D4E;
     padding-top: 25%;
 }
 
+
+.top-container{
+    padding-top: 1%;
+}
+
+.circle-container {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 12%;
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/RamAhuja.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  .circle-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  
+
+  .typing-animation {
+    animation: typing 5s steps(20) infinite;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 400px; 
+    }
+  }
+  
+  .blink-cursor {
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+
+
 /* Navigation Bar */
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .navbar {
-    background-color: #e4d7c5; /* A light beige */
-    color: #4a4a4a; /* Darker gray text */
+    font-family: 'Roboto Flex';
+    padding: 1rem 0;
+    background-color: #F9F7F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-item a {
-    color: #4a4a4a; /* Darker gray text */
+.logo-container {
+    margin-right: 1rem;
 }
 
-.nav-item a:hover {
-    color: #333333; /* Even darker gray on hover */
+.logo-container img {
+    width: 50px;
 }
 
-.nav-item a:after {
-    background: #8b7d6b; /* Taupe for underline */
+.navbar-brand, .nav-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #DBE2EF !important; /* Ensuring override */
+    text-decoration: none;
 }
 
-/* Download Buttons, Image, Responsive sections remain mostly unchanged but may require tweaks in color */
+.nav-item {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.nav-link { /* Styling for the nav links */
+    color: #3f71afa1 !important; /* Ensuring override */
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #3F72AF;
+    height: 1px;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #3F72AF !important; /* Maintain color on hover */
+    z-index: 1;
+}
+
+.nav-link:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+.nav-link:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+@keyframes fill {
+    100% {
+      width: 100%;
+      background: #3F72AF;
+    }
+}
+
+@-webkit-keyframes fill {
+    100% {
+      width: 100%;
+      background: #3F72AF;
+    }
+}
+
+@-moz-keyframes fill {
+    100% {
+      width: 100%;
+      background: #3F72AF;
+    }
+}
+  
+
+  
+  
+
+/* Download Buttons */
+
+.download{
+    margin: 5% 3% 5% 0;
+}
+
+/* Image */
+.dog-img{
+    transform: rotate(30deg);
+    width:65%;
+    position:absolute;
+}
+
+/* Responsive */
+
+@media (max-width:1028px){
+    .dog-img{
+        position: static;
+        transform: rotate(0);
+        width:50%;
+    }
+
+    #title{
+        text-align: center;
+    }
+}
+
+
 
 /* Features */
-.features-header, .features-desc, .features-title {
-    color: #4a4a4a; /* Darker gray for contrast */
+
+#features{
+    position: center;
+    z-index: 1;
+    text-align: center;
 }
 
-.underline, .underline-name, .underlineDescription-other {
-    text-decoration-color: #d2b48c; /* Tan color for underlines */
+.middle-container{
+    justify-content: center;
+    /* border: 3px solid #BCCCDC; */
+    padding: 20px;
 }
 
-.btn-custom-color {
-    background-color: #d2b48c; /* Tan color */
-    color: #fff; /* White text */
+
+.features-header{
+    font: 'Poppins';
+    font-size: 2.5rem;
+    margin: 8rem 8rem 2rem;
 }
+
+.features-body{
+    color: #BCCCDC;
+}
+
+.underline{
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+    font-weight: bolder;
+}
+.underline-name {
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+    text-decoration-thickness: 5%;
+    font-weight: bolder;
+    text-underline-offset: 5px; 
+}
+
+
+
+.underlineDescription-other{
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+}
+
+.full-features-desc{
+    margin: 3rem 0rem 2rem;
+    font-size: 1.3rem;
+}
+
+.features-desc{
+    color: #3F72AF;
+}
+
+.features-title{
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+    border-bottom: none;
+   margin-bottom: 0;
+   padding-top: 30px;
+}
+
+.vertical-dashed-line {
+    border: none;
+    border-left: 1px dashed #000;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+  .btn-custom-color {
+    background-color: #EF9C66; 
+    color: black; 
+  }
+  
+  
+
 
 /* Projects */
-.card, .card-header, .card-body {
-    background-color: #fffaf0; /* Floral White */
+
+.project-image {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: top;
 }
 
-.card-header, .card-body, .projects-title, .project-subHeadings {
-    color: #4a4a4a; /* Darker gray for text */
+.button-container {
+    display: inline-flex;
+    gap: 10px; 
+  }
+  
+
+.pricing-column{
+    padding: 3% 2%;
 }
 
-/* Footer and other sections should be reviewed to ensure consistent use of the beige color palette */
+.projects-title{
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+    margin-bottom: 3%;
+}
+
+.project-subHeadings{
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+    text-underline-offset: 5px;
+}
+
+.card-header{
+    font: 'Poppins';
+    font-weight: 200;
+    color: #3F72AF;
+    background-color: #DBE2EF;
+}
+
+.card-body{
+    min-width: 282px;
+    background-color: #DBE2EF;
+}
+
+.card{
+    border-radius: 20px;
+    overflow: hidden;  
+    transition: transform 0.3s;
+    background-color: #DBE2EF;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+  }
+
+
+/* cta-header */
+
+#research {
+    margin-bottom: 0px; 
+}
+
+#contactMe {
+    padding-top: 0px; 
+}
+
+.cta-header{
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-decoration-color: #EF9C66;
+}
+
+/* Footer */
