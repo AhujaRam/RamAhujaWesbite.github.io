@@ -21,7 +21,7 @@ p{
 }
 
 .container-fluid{
-    padding: 3% 3%;
+    padding: 0%;
 }
   
 
@@ -350,10 +350,16 @@ body {
     display: inline-flex;
     gap: 10px; 
   }
-  
 
-.pricing-column{
-    padding: 3% 2%;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pricing-column {
+    display: flex;
+    flex: 1 0 auto; /* This ensures that the column takes up the space it needs without shrinking */
+    padding: 15px;
 }
 
 .projects-title{
@@ -376,15 +382,20 @@ body {
     background-color: #DBE2EF;
 }
 
-.card-body{
-    min-width: 282px;
+.card{
+    min-height: 400px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    overflow: hidden;  
+    transition: transform 0.3s;
     background-color: #DBE2EF;
 }
 
-.card{
-    border-radius: 20px;
-    overflow: hidden;  
-    transition: transform 0.3s;
+.card-body{
+    flex-grow: 1;
     background-color: #DBE2EF;
 }
 
@@ -407,6 +418,21 @@ body {
     font-size: 2.5rem;
     text-decoration: underline;
     text-decoration-color: #EF9C66;
+}
+
+#contactMe a.btn {
+    box-shadow: none;
+    border: none;
+    background-clip: padding-box;  /* Ensures background extends only to the border edge */
+}
+
+#contactMe a.btn:hover {
+    text-decoration: none;  /* As previously suggested to remove underline */
+}
+
+#contactMe a.btn {
+    overflow: visible;  /* Ensures nothing is hidden or cut off */
+    position: relative; /* Adjusts positioning context */
 }
 
 /* Footer */
